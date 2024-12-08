@@ -1,0 +1,220 @@
+
+/* MAIN e gerais*/
+.sessao {
+    margin: 35px auto;
+    width: 76%;
+}
+/* --- Banner (Outdoor e certificaçõess) */
+#banner {
+    background-color: #F7F4EE;
+    border-radius: 15px;
+}
+#outdoor_space {
+    position: relative;
+    width: 100%;
+}
+#outdoor_space > div {
+    position: absolute;
+    width: 100%;
+    height: 15%;
+}
+#outdoor_space .arrow-prev {top:40%; left: 0;}
+#outdoor_space .arrow-next {top:40%; left: 0; transform: scaleX(-1) /* inverte horizontalmente o elemento */} 
+#outdoor_space > div > img {height: 100%;}
+#outdoor_space #outdoor img {width: 100%;}
+
+#certificacoes {
+    height: 100px;
+    width: 100%;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:20px;
+    overflow-x: hidden; /* barra de rolagem */
+}
+#certificacoes > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    height: 80px;
+}
+#certificacoes h2 {text-align: center;}
+
+/* --- Propaganda de produtos */
+.produtos {
+    border-radius: 10px;
+    background-color: #FFFEFE;
+    padding: 5px 20px;
+
+    border-top: var(--terciaria) solid 4px;
+    box-shadow: 0px 2px 5px var(--nulo);
+}
+
+/* --- / --- título de sessão e botões anterior e próximo (funcionando nos produtos e no blog) */
+.session_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: auto; width: 100%;
+    border-bottom: 1px #888888 solid;
+    padding: 5px 20px 5px 0;
+}
+
+.category_pass {
+    display: flex;
+    gap: 10px;
+}
+.category_pass .arrow-prev, .category_pass .arrow-next {
+    width: 50px; height: 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.category_pass img {width: 40px; height: 40px; margin: auto;}
+
+/* --- / --- configuração dos produtos */
+.produtos .container:nth-child(2) {
+    margin: 5px 0;
+    
+    display: flex;
+    justify-content: space-around;
+    gap:10px;
+    overflow-x:scroll;
+}
+.produto {
+    min-width: 250px; height: 420px;
+}
+.produto > img {width: 100%;}
+
+/* --- / --- Forrmatação do texto na sessão produtos */
+.session_title {
+    text-transform: uppercase;
+}
+.product_name {
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+.price {
+    font-size: 22px;
+    color: var(--primaria);
+    font-weight: 900;
+    text-align: center;
+    margin: 8px 0;
+}
+.btn-buy {
+    background-color: var(--primaria);
+    width: 180px;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 5px;
+    font-weight: 900;
+    margin: 5px auto;
+    transition: all 100ms;
+}
+.btn-buy a {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.btn-buy:hover {
+    background-color: var(--hover);
+    transform: scale(1.1);
+}
+.category_see-more {
+    font-size: 16px;
+    color: #393939;
+    text-align: center;
+    margin: 5px auto;
+}
+.category_see-more a {text-decoration: none;color: var(--nulo);}
+.category_see-more a:hover {opacity: 0.80;}
+
+/* --- Blog */
+#blog {
+    background-color: #FFFEFE;
+    box-shadow: 0 2px 10px #414141, 0 -2px 10px var(--nulo);
+    /* height: 500px; */
+    padding: 10px 7%;
+}
+#blog .session_title {
+    font-family: "JetBrains Mono", monospace;
+}
+/* --- / --- link categorias em destaque */
+.highlight_categories {flex-grow: 1;padding: 0 25px; overflow-x:hidden;}
+.highlight_categories .overflor-setting {
+    display: flex;
+    align-items: center;
+    gap:20px;
+
+    overflow-x:hidden;
+    list-style: none;
+    white-space:nowrap;
+}
+.highlight_categories a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+}
+/* --- / --- posts do blog */
+.blog-posts {
+    display: flex;
+    gap: 40px;
+    padding: 15px 0;
+    overflow-x: scroll;
+}
+.post {
+    min-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* utilizar o transition e scale*/
+}
+.post-img {
+    width: 100%;
+    border: #000000 1px solid;
+    border-radius: 10px;
+}
+.post_info {
+    height: 30px; width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.date, .category {
+    display: flex;
+    align-items: center;
+    gap:5px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 13px;
+}
+.post_title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 22px;
+}
+#blog .short-description {
+    text-align: justify;
+    font-size: 18px;
+}
+.btn-see-more {
+    border: var(--nulo) 1px solid;
+    border-radius: 10px;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    transition: all 200ms;
+}
+.btn-see-more:hover {background-color: #f8dec8; transform: scale(1.04);}
+.btn-see-more a {font-size: 22px; text-decoration: none; color: #414141;}
+/* nota: link da página do blog configurado na sessão dos produtos */
