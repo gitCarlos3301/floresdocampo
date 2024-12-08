@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background:#eeeadf;
+    --nulo:#414141;
+    --hover:#E29252;
+    --secundaria:#12493A;
+    --terciaria: #52433D;
+    --primaria:#E7624C;
+    --primaria-light:#ED9E9A;
+}
+
+body {
+    background-color: var(--background);
+}
+h1, h2, h3 {
+    font-weight: 100;
+}
+/* CABEÇALHO E FILHOS */
+header {
+    width: 100%;
+    min-height: 185px;
+    max-height: 30vh;
+    background-color: #FFF;
+    box-shadow: 0 2px 10px var(--nulo);
+    
+    display: grid;
+    grid-template-columns: 1fr 80%;
+    grid-template-rows: 80% 20%;
+}
+#logo {
+    grid-area: 1 / 1 / 3 / 2;
+    height: 90%;
+    margin: auto;
+}
+header .container {
+    display: grid;
+    grid-template-columns: 1fr 100px 100px;
+    grid-template-rows: 60% 40%;
+}
+/* --- Telefones */
+#contato {
+    grid-area: 1 / 1 / 2 / 2;
+
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#contato img {
+    height: 60px;
+}
+#contato h3 {
+    color: var(--secundaria);
+    line-height: 30px;
+    font-family: 'Times New Roman';
+}
+/* --- Barra de pesquisa */
+#barra_pesquisa {
+    grid-area: 2 / 1 / 3 / 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #FAFAFA;
+    border: 1px #1A1A1A solid;
+    border-radius: 10px;
+    height: 70%;
+    margin: 0 10px;
+}
+#barra_pesquisa img {
+    height: 32px;
+}
+#barra_pesquisa h2 {
+    color: var(--nulo);
+    margin-left: 10px;
+    font-size: 22px;
+}
+#barra_pesquisa h2:hover {opacity: 0.8;}
+/* --- Minha conta e cesta*/
+#account {grid-area: 1 / 2 / 3 / 3;}
+#basket {grid-area: 1 / 3 / 3 / 4;}
+#account, #basket {
+    width: 70px;
+    margin: auto;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: all 500ms;
+}
+#account img, #basket img {
+    width: 100%;
+}
+#account h3, #basket h3 {
+    text-align: center;
+    color:#6d6b6b;
+    font-size: 18px;
+}
+#account:hover, #basket:hover {
+    background-color: #f8dec8;
+    transform: scale(1.1);
+}
+/* --- Categorias menu */
+
+#categorias {
+    background-image: url(../imagens/icons/Line\ sugestoes.png);
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    gap:10px;
+
+    list-style: none;
+    padding: 14px;
+    height: 80%;
+}
+#categorias a {
+    font-size: 18px;
+    white-space: nowrap; /* impede que o texto quebre a linnha */
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--terciaria);
+    transition: all 50ms;
+}
+#categorias a:hover {color:#E29252;}
+
+#categorias #personalizado {
+    padding: 3px;
+    border-radius: 4px;
+    background-color: var(--primaria-light);
+    transition: all 200ms;
+}
+#categorias #personalizado:hover {background-color: var(--hover); transform: scale(1.02);}
+#categorias #personalizado a:hover {color: #52433D;}
+
+/* FOOTER e gerais */
+footer {width: 100%;}
+
+#logo_footer {height: 240px;}
+
+footer #info {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: space-evenly;
+}
+
+#pagamento h2, footer #social h2 {margin-bottom: 30px; font-size: 28px;}
+
+footer > h2 {
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 0;
+}
+/* --- Métodos de pagamento */
+#pagamento {
+    width: 400px;
+    text-align: center;
+    margin: auto 0;
+}
+#pagamento ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap:5px;
+    justify-content: space-between;
+
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.payment_method {
+    height:50px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px black solid;
+    padding: 5px;
+}
+.payment_method img {width: 100%;height: 100%;}
+.payment_method.short {
+    width:50px;
+}
+.payment_method.large {
+    width: 100px;
+}
+/* --- Social media */
+#social {
+    text-align: center;
+    width: 250px;
+    margin: auto 0;
+}
+#social ul {
+    margin: 0 auto;
+    width: 80%;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+#social ul li {width: 86px;height: 86px;}
+.linksocial {border-radius: 10px;}
+#facebook {background-image: url(../imagens/social_media/facebook\ logo.png); background-size: cover;}
+#youtube {background-image: url(../imagens/social_media/youtube\ logo.png); background-size: cover;}
+#instagram {background-image: url(../imagens/social_media/instagram\ logo.png); background-size: cover;}
+#whatsapp {background-image: url(../imagens/social_media/whatsapp\ logo.png); background-size: cover;}
+
+/* Link whatsapp sempre visível */
+#whats-fixed {
+    width: 50px; height: 50px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+#whats-fixed img {width: 100%; height: 100%; transition: all 300ms;}
+#whats-fixed img:hover {transform: rotate(15deg);}
