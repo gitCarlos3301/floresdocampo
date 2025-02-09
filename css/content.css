@@ -1,7 +1,7 @@
 
 /* MAIN e gerais*/
 .sessao {
-    margin: 35px auto;
+    margin: 25px auto;
     width: 76%;
 }
 /* --- Banner (Outdoor e certificaçõess) */
@@ -42,6 +42,11 @@
     height: 80px;
 }
 #certificacoes h2 {text-align: center;}
+#certificacoes img {height: 100%;}
+
+#certificacoes div:nth-child(1) {min-width: 270px;}
+#certificacoes div:nth-child(2) {min-width: 300px;}
+#certificacoes div:nth-child(3) {min-width: 220px;}
 
 /* --- Propaganda de produtos */
 .produtos {
@@ -61,21 +66,21 @@
 
     height: auto; width: 100%;
     border-bottom: 1px #888888 solid;
-    padding: 5px 20px 5px 0;
+    padding: 5px 8px 5px 0;
 }
 
 .category_pass {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 .category_pass .arrow-prev, .category_pass .arrow-next {
-    width: 50px; height: 50px;
+    width: 35px; height: 35px;
     
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.category_pass img {width: 40px; height: 40px; margin: auto;}
+.category_pass img {width: 80%; height: 80%; margin: auto;}
 
 /* --- / --- configuração dos produtos */
 .produtos .container:nth-child(2) {
@@ -87,7 +92,7 @@
     overflow-x:scroll;
 }
 .produto {
-    min-width: 250px; height: 420px;
+    width: 250px; height: auto;
 }
 .produto > img {width: 100%;}
 
@@ -111,6 +116,7 @@
 .btn-buy {
     background-color: var(--primaria);
     width: 180px;
+    max-width: 100%;
     padding: 20px;
     text-align: center;
     font-size: 24px;
@@ -142,10 +148,11 @@
     background-color: #FFFEFE;
     box-shadow: 0 2px 10px #414141, 0 -2px 10px var(--nulo);
     /* height: 500px; */
-    padding: 10px 7%;
+    padding: 10px 5%;
 }
 #blog .session_title {
     font-family: "JetBrains Mono", monospace;
+    min-width: 315px;
 }
 /* --- / --- link categorias em destaque */
 .highlight_categories {flex-grow: 1;padding: 0 25px; overflow-x:hidden;}
@@ -167,16 +174,18 @@
 /* --- / --- posts do blog */
 .blog-posts {
     display: flex;
+    justify-content: space-around;
     gap: 40px;
     padding: 15px 0;
     overflow-x: scroll;
 }
 .post {
-    min-width: 450px;
+    min-width: 280px;
+    width: 30%;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    /* utilizar o transition e scale*/
 }
 .post-img {
     width: 100%;
