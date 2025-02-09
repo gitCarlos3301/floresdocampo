@@ -6,6 +6,9 @@
     <title>Flores do Campo</title>
     <link href="css/essentials.css" rel="stylesheet">
     <link href="css/content.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/response.css" rel="stylesheet">
+    <script src="js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
@@ -13,7 +16,8 @@
 
 <body>
     <header>
-        <img id="logo" src="imagens/logo floriculta vertical.png" alt="Logo da empresa Flores do Campo">
+        <img id="logovertical" src="imagens/logo floriculta vertical.png" alt="Logo da empresa Flores do Campo">
+        <img id="logohorizontal" src="imagens/logo floricultura horizontal.png" alt="Logo da empresa Flores do Campo">
         <div class="container">
             <div id="contato">
                 <img src="imagens/icons/telefone icon.png" alt="Ícone de um telefone">
@@ -31,6 +35,38 @@
                 <img src="imagens/icons/basket icon.png">
                 <h3>Minha cesta</h3>
             </a>
+
+            <label id="btn-hidden-menu" for="hidden-menu-check">☰</label>
+            <input type="checkbox" id="hidden-menu-check">
+            <nav id="hidden-menu">
+                <nav id="categorias">
+                    <li id="personalizado"><a href="#">Personalização</a></li>
+                    <li><a href="#">Cestas de presente</a></li>
+                    <li><a href="#">Por ocasiões</a></li>
+                    <li><a href="#">Para a sua casa</a></li>
+                    <li><a href="#">Buquês</a></li>
+                    <li><a href="#">Plantas e Arranjos</a></li>
+                    <li><a href="#">Flores Específicas</a></li>
+                    <li><a href="#">Temporadas e Festividades</a></li>
+                    <li><a href="#">Jardins e Cultivo</a></li>
+                    <li><a href="#">Bem-Estar e Aromaterapias</a></li>
+                </nav>
+                <aside id="simple-icons">
+                    <div id="contato">
+                        <img src="imagens/icons/telefone icon.png" alt="Ícone de um telefone">
+                        <h3>Televendas: <strong>4002-8922</strong><br>WhatsApp: <strong>8140-6756</strong></h3>
+                    </div>
+                    <a id="account" href="#">
+                        <img src="imagens/icons/account icon.png">
+                        <h3>Minha conta</h3>
+                    </a>
+                    <a id="basket" href="#">
+                        <img src="imagens/icons/basket icon.png">
+                        <h3>Minha cesta</h3>
+                    </a>
+                </aside>
+                <label id="btn-close-menu" for="hidden-menu-check">Fechar</label>
+            </nav>
         </div>
         <nav id="categorias">
             <li id="personalizado"><a href="#">Personalização</a></li>
@@ -55,15 +91,15 @@
                 <div class="arrow-next"><img src="imagens/icons/arrow icon.png"></div>
             </div>
             <div id="certificacoes">
-                <div style="min-width: 270px;">
+                <div>
                     <img src="imagens/icons/fast shipping icon.png">
                     <h2>Entrega rápida<br><strong>em poucas horas</strong></h2>
                 </div>
-                <div style="min-width: 300px;">
+                <div>
                     <img src="imagens/icons/agendamento icon.png">
                     <h2>Agende sua entrega<br><strong>com data e horário</strong></h2>
                 </div>
-                <div style="min-width: 220px;">
+                <div>
                     <img src="imagens/icons/whatsapp transparent icon.png">
                     <h2>Compre pelo<br><strong>Whatsapp</strong></h2>
                 </div>
@@ -102,9 +138,6 @@
         <section class="sessao produtos">
             <div class="session_top">
                 <h2 class="session_title">Buquês de flores</h2>
-                <div>
-
-                </div>
                 <div class="category_pass">
                     <div class="arrow-prev" style="background-color: #406C5F;"><img src="imagens/icons/arrow full white.png" style="transform: scaleX(-1);"></div>
                     <div class="arrow-next" style="background-color: #12493A;"><img src="imagens/icons/arrow full white.png"></div>
@@ -164,7 +197,7 @@
         </section>
         <section id="blog" style="width: 100%;">
             <div class="session_top">
-                <h2 class="session_title" style="min-width: 315px;"><strong>Blog Flores do Campo</strong></h2>
+                <h2 class="session_title"><strong>Blog Flores do Campo</strong></h2>
                 <div class="highlight_categories">
                     <menu class="overflor-setting">
                         <li><a href="#">Dicas e Inspiração</a></li>
@@ -219,7 +252,8 @@
     </main>
     <footer>
         <div id="info">
-            <img src="imagens/logo floriculta vertical.png" id="logo_footer">
+            <img src="imagens/logo floriculta vertical.png" id="logo_footervertical">
+            <img src="imagens/logo floricultura horizontal.png" id="logo_footerhorizontal">
             <div id="pagamento">
                 <h2>Formas de pagamento</h2>
                 <ul>
